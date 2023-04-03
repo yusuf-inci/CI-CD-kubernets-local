@@ -16,12 +16,12 @@ Vagrant.configure("2") do |config|
 
     ### NexusServer VM  ###
     config.vm.define "NexusServer" do |nexus|
-        nexus.vm.box = "ubuntu/bionic64"
+        nexus.vm.box = "bento/amazonlinux-2"
         nexus.vm.hostname = "NexusServer"
         nexus.vm.network "private_network", ip: "192.168.56.21"
         nexus.vm.provider "virtualbox" do |vb|
             vb.memory = "3072"
-            vb.cpus = "2"
+            vb.cpus = "3"
         end
         nexus.vm.provision "shell", path: "userdata/nexus.sh"
     end
@@ -29,12 +29,12 @@ Vagrant.configure("2") do |config|
 
     ### SonarServer VM  ###
     config.vm.define "SonarServer" do |sonar|
-        sonar.vm.box = "bento/amazonlinux-2"
+        sonar.vm.box = "ubuntu/bionic64"
         sonar.vm.hostname = "SonarServer"
-        sonar.vm.network "private_network", ip: "192.168.56.21"
+        sonar.vm.network "private_network", ip: "192.168.56.31"
         sonar.vm.provider "virtualbox" do |vb|
             vb.memory = "3072"
-            vb.cpus = "2"
+            vb.cpus = "3"
         end
         sonar.vm.provision "shell", path: "userdata/sonar.sh"
     end
