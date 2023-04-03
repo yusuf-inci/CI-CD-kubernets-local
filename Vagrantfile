@@ -23,7 +23,8 @@ Vagrant.configure("2") do |config|
             vb.memory = "4096"
             vb.cpus = "2"
         end
-        #nexus.vm.provision "shell", path: "userdata/nexus.sh"
+        #nexus.vm.synced_folder ".", "/vagrant", type: "nfs"
+        nexus.vm.provision "shell", path: "userdata/nexus.sh"
     end
 
 
