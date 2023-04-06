@@ -8,7 +8,7 @@ Before running this Vagrantfile, you need to install the following tools on your
 
 - [VirtualBox](https://www.virtualbox.org/)
 - [Vagrant](https://www.vagrantup.com/)
-- install vagrant-hostmanager and vagrant-vbguest plugin
+- install vagrant plugins:
  $ vagrant plugin install vagrant-hostmanager
  $ vagrant plugin install vagrant-vbguest
 
@@ -17,23 +17,19 @@ Before running this Vagrantfile, you need to install the following tools on your
 1. Clone the repository: `git clone https://github.com/user/project.git`
 2. Navigate to the project directory: `cd project`
 3. Start the Vagrant virtual machine: `vagrant up` 
- - This will create the virtual machines for Jenkins, Nexus, and SonarQube servers with the necessary
-software and configuration.
+ - This will create the virtual machines for Jenkins, Nexus, and SonarQube servers with the necessary software and configuration.
 4. Connect to the virtual machines:
    - To connect to the Jenkins server: `vagrant ssh JenkinsServer`
    - To connect to the Nexus server: `vagrant ssh NexusServer`
    - To connect to the SonarQube server: `vagrant ssh SonarServer`
 
 ## Configuration
+
 The Vagrantfile contains the following configuration:
 
-- config.hostmanager.enabled = true: Enables the vagrant-hostmanager plugin, which automatically 
-updates the hosts file on the host machine with the private network IP addresses of the virtual 
-machines.
-- config.hostmanager.manage_host = true: Automatically adds the virtual machine hostnames and IP 
-addresses to the /etc/hosts file on the virtual machines themselves.
-- config.vm.define: Defines each virtual machine with its own settings, such as the box, hostname, 
-private IP address, memory, CPU, and provisioning script.
+- config.hostmanager.enabled = true: Enables the vagrant-hostmanager plugin, which automatically updates the hosts file on the host machine with the private network IP addresses of the virtual machines.
+- config.hostmanager.manage_host = true: Automatically adds the virtual machine hostnames and IP addresses to the /etc/hosts file on the virtual machines themselves.
+- config.vm.define: Defines each virtual machine with its own settings, such as the box, hostname, private IP address, memory, CPU, and provisioning script.
 
 ## Customizing the Vagrantfile
 
