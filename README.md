@@ -9,7 +9,7 @@ VirtualBox
 Installation
 To install, simply clone this repository and run the following command in your terminal:
 
-Copy code
+￼Copy code
 vagrant up
 This will create the virtual machines for Jenkins, Nexus, and SonarQube servers with the necessary software and configuration.
 
@@ -38,4 +38,3 @@ This project is licensed under the [license name] License - see the LICENSE file
 
 Acknowledgments
 [Optional: list any acknowledgments, such as inspirations or references used in the project].
-
