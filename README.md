@@ -14,8 +14,8 @@ Before running this Vagrantfile, you need to install the following tools on your
 
 ## Usage
 
-1. Clone the repository: `git clone https://github.com/user/project.git`
-2. Navigate to the project directory: `cd project`
+1. Clone the repository: `git clone https://github.com/yusuf-inci/ci-env-vagrant.git`
+2. Navigate to the project directory: `cd ci-env-vagrant`
 3. Start the Vagrant virtual machine: `vagrant up` 
  - This will create the virtual machines for Jenkins, Nexus, and SonarQube servers with the necessary software and configuration.
 4. Connect to the virtual machines:
