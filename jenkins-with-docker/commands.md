@@ -59,5 +59,10 @@ ls -ltr
 - hit Save ==> Build now
 
 10. Exploring the Jenkins Filesystem and Workspace
+- go to terminal, login in to container. the volume we mounted is `/var/jenkins_home`. you'll see workspace directory in there. Once you build a job jenkins create a directory related your job in the workspace. Also plugins, updates, users, jobs, secrets and etc are in the jenkins users home directory. `cd ~` `ls -ltr`
+`docker exec -it jenkins-blueocean bash`
+`ls -ltra`
+
+
 - 00:26:38 
 
