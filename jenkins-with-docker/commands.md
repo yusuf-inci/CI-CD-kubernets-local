@@ -63,6 +63,10 @@ ls -ltr
 `docker exec -it jenkins-blueocean bash`
 `ls -ltra`
 
+11. Freestyle job - Running Python scripts with Jenkins
+- go to dashboard ==> New item ==> name: my-python-job freestyle project ==> Source Code Management ==> Git: <repository url> ==> Build ==> Execute shell ==> `python3 helloworld.py`==> save ==> build now 
 
-- 00:26:38 
+12.
+
+
 
