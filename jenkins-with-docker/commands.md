@@ -66,7 +66,16 @@ ls -ltr
 11. Freestyle job - Running Python scripts with Jenkins
 - go to dashboard ==> New item ==> name: my-python-job freestyle project ==> Source Code Management ==> Git: <repository url> ==> Build ==> Execute shell ==> `python3 helloworld.py`==> save ==> build now 
 
-12.
+12. Setting up Docker Cloud Agents
+- go to Dashboard ==> Manage Jenkins ==> Manage nodes and clouds ==> New Nodes: to create permanent agent. This is depracated way.
+- go to Dashboard ==> Manage Jenkins ==> Manage nodes and clouds ==> Configure clouds (This is how you set up agents using cloud platforms)
+- go to plugin manager ==> install docker plugin ==> restart jenkins and log in again
+- go to Dashboard ==> Manage Jenkins ==> Manage nodes and clouds ==> Configure 
+clouds ==> Add a new cloud ==> Add docker ==> 
+
+
+
+
 
 
 
