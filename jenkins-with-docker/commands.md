@@ -90,33 +90,7 @@ unix-connect:/var/run/docker.sock`
 - go to Dashboard ==> Manage Jenkins ==> Manage nodes and clouds ==> Configure 
 clouds ==> Add a new cloud ==> Add docker ==> Configure Clouds ==> Docker Agent Template ==> Add Docker Template ==> Labels: docker-agent-alpine ==> check enabled ==> name: docker-agent-alpine ==> docker image: jenkins/agent:alpine-jdk11 ==> instance capacity:2 ==> Remote file system: /home/jenkins ==> save
 
-15. 
-Docker
-Name
-?
-￼
-Docker Host URI
-?
-￼
-Server credentials
-￼
-- none -
- 
-￼￼Add
- 
-￼Advanced...
-￼Test Connection
-￼Version = 23.0.6, API Version = 1.42
-￼Enabled?
-Error Duration
-?
-
-
-
-
-
-
-
-
+15. Using Labels to restrict Jobs to Agents 
+- 
 
 
