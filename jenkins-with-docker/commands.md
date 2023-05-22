@@ -73,6 +73,42 @@ ls -ltr
 - go to Dashboard ==> Manage Jenkins ==> Manage nodes and clouds ==> Configure 
 clouds ==> Add a new cloud ==> Add docker ==> 
 
+13. Jenkins Agent using Docker Desktop fix  
+- alpine/socat container to forward traffic from Jenkins to Docker Desktop on 
+Host Machine
+https://stackoverflow.com/questions/47709208/
+how-to-find-docker-host-uri-to-be-used-in-jenkins-docker-plugin
+- goto terminal run following command
+`docker run -d --restart=always -p 127.0.0.1:2376:2375 --network jenkins -v /var/
+run/docker.sock:/var/run/docker.sock alpine/socat tcp-listen:2375,fork,reuseaddr 
+unix-connect:/var/run/docker.sock`
+- grab the ip address
+`docker inspect <container_id> | grep IPAddress`
+- go to Dashboard ==> Manage Jenkins ==> Manage nodes and clouds ==> Configure 
+clouds ==> Add a new cloud ==> Add docker ==> Configure Clouds
+Docker
+Name
+?
+￼
+Docker Host URI
+?
+￼
+Server credentials
+￼
+- none -
+ 
+￼￼Add
+ 
+￼Advanced...
+￼Test Connection
+￼Version = 23.0.6, API Version = 1.42
+￼Enabled?
+Error Duration
+?
+
+
+
+
 
 
 
