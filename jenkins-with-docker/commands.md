@@ -70,8 +70,7 @@ ls -ltr
 - go to Dashboard ==> Manage Jenkins ==> Manage nodes and clouds ==> New Nodes: to create permanent agent. This is depracated way.
 - go to Dashboard ==> Manage Jenkins ==> Manage nodes and clouds ==> Configure clouds (This is how you set up agents using cloud platforms)
 - go to plugin manager ==> install docker plugin ==> restart jenkins and log in again
-- go to Dashboard ==> Manage Jenkins ==> Manage nodes and clouds ==> Configure 
-clouds ==> Add a new cloud ==> Add docker ==> 
+- go to Dashboard ==> Manage Jenkins ==> Manage nodes and clouds ==> Configure clouds ==> Add a new cloud ==> Add docker ==> follow number 13 below
 
 13. Jenkins Agent using Docker Desktop fix  
 - alpine/socat container to forward traffic from Jenkins to Docker Desktop on 
@@ -84,8 +83,14 @@ run/docker.sock:/var/run/docker.sock alpine/socat tcp-listen:2375,fork,reuseaddr
 unix-connect:/var/run/docker.sock`
 - grab the ip address
 `docker inspect <container_id> | grep IPAddress`
+- go to Dashboard ==> Manage Jenkins ==> Manage nodes and clouds ==> Configure clouds ==> Add a new cloud ==> Add docker ==> Docker Host URI: tcp://container ip:2375
+- check enabled ==> test connection ==> save
+
+14. Docker Agent Template Setup 
 - go to Dashboard ==> Manage Jenkins ==> Manage nodes and clouds ==> Configure 
-clouds ==> Add a new cloud ==> Add docker ==> Configure Clouds
+clouds ==> Add a new cloud ==> Add docker ==> Configure Clouds ==> Docker Agent Template ==> Add Docker Template ==> Labels: docker-agent-alpine ==> check enabled ==> name: docker-agent-alpine ==> docker image: jenkins/agent:alpine-jdk11 ==> instance capacity:2 ==> Remote file system: /home/jenkins ==> save
+
+15. 
 Docker
 Name
 ?
