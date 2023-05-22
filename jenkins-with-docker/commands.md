@@ -91,6 +91,15 @@ unix-connect:/var/run/docker.sock`
 clouds ==> Add a new cloud ==> Add docker ==> Configure Clouds ==> Docker Agent Template ==> Add Docker Template ==> Labels: docker-agent-alpine ==> check enabled ==> name: docker-agent-alpine ==> docker image: jenkins/agent:alpine-jdk11 ==> instance capacity:2 ==> Remote file system: /home/jenkins ==> save
 
 15. Using Labels to restrict Jobs to Agents 
-- 
+- go to my-first-project and configure ==> check Restrict where this project can be run ==> label: docker-agent-alpine ==> save and build now ==> check the logs you'll see job run in the docker agent
+- for the second job (my-python-job) we need the build new image ==> you can find dockerfile in python-image folder ==> run the following command in that folder to create and push the image
+`docker build -t 90041/myjenkinsagents:python . && docker push 90041/myjenkinsagents:python`
+- go to Dashboard ==> Manage Jenkins ==> Manage nodes and clouds ==> Configure 
+clouds ==> Add a new cloud ==> Add docker ==> Configure Clouds ==> Docker Agent 
+Template ==> Add Docker Template ==> Labels: docker-agent-python ==> check 
+enabled ==> name: docker-agent-python ==> docker image: 90041/myjenkinsagents:python ==> instance capacity:2 ==> Remote file system: /home/jenkins ==> save 
+- go to my-python-job and configure ==> check Restrict where this project can
+be run ==> label: docker-agent-python ==> save and build now ==> check the logs 
+you'll see job run in the docker agent 
 
 
