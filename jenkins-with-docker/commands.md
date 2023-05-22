@@ -103,5 +103,7 @@ be run ==> label: docker-agent-python ==> save and build now ==> check the logs
 you'll see job run in the docker agent 
 
 16. Setting Builds to be automatically triggered on commits 
+- go to my-python-job ==> Build triggers ==> check Poll SCM and schedule: */5 * * * * ==> save 
+- make any change in the helloworld.py (print(" Hello world after enabled Poll SCM ") and commit&push it to repo and wait 5 minutes and check the log you should see the job run.
 
 
