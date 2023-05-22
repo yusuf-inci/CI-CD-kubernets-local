@@ -102,4 +102,6 @@ enabled ==> name: docker-agent-python ==> docker image: 90041/myjenkinsagents:py
 be run ==> label: docker-agent-python ==> save and build now ==> check the logs 
 you'll see job run in the docker agent 
 
+16. Setting Builds to be automatically triggered on commits 
+
 
