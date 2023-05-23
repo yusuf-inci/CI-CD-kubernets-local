@@ -104,6 +104,10 @@ you'll see job run in the docker agent
 
 16. Setting Builds to be automatically triggered on commits 
 - go to my-python-job ==> Build triggers ==> check Poll SCM and schedule: */5 * * * * ==> save 
-- make any change in the helloworld.py (print(" Hello world after enabled Poll SCM ") and commit&push it to repo and wait 5 minutes and check the log you should see the job run.
+- make any change in the helloworld.py (print(" Hello world after enabled Poll SCM ") and commit&push it to repo and wait 5 minutes and check the log, you should see Started by an SCM change on top of console output.
 
+17. Setting up Declarative Pipelines using Groovy
+- Declarative pipeline using script:new item ==> pipeline ==> name: my_first_build_pipeline ==> ok ==> pipeline script ==> write the code ==> save and build ==> examine the logs
 
+- Declarative pipeline using Groovy:new item ==> pipeline ==> name: 
+my_first_build_pipeline ==> ok ==> pipeline script from SCM ==> SCM: Git ==> enter Repository url ==> enter script path ==> save and build ==> examine the logs ==> next time watch it will triger auto
