@@ -111,3 +111,6 @@ you'll see job run in the docker agent
 
 - Declarative pipeline using Groovy:new item ==> pipeline ==> name: 
 my_first_build_pipeline ==> ok ==> pipeline script from SCM ==> SCM: Git ==> enter Repository url ==> enter script path ==> save and build ==> examine the logs ==> next time watch it will triger auto
+
+18. Jenkins BlueOcean
+- goto dashboard ==> hit open blueocean ==> select the job ==> walk around : it has nicer interface than classical interface
