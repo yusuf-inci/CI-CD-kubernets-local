@@ -10,4 +10,4 @@
 
 # Ignore all .txt files except requirement.txt
 *.txt
-!requirement.txt
+!requirements.txt
