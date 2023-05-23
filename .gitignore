@@ -11,3 +11,6 @@
 ### Others ###
 *.txt
 *.log
+
+### except for requirement.txt ###
+!requirement.txt
