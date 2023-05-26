@@ -1,4 +1,4 @@
-# Complete Jenkins Tutorial | Learn Jenkins From Scratch In 3 Hours 🎯| LambdaTest
+# Complete Jenkins Tutorial | Learn Jenkins From Scratch In 3 Hours 
 - url: https://www.youtube.com/watch?v=nCKxl7Q_20I 
 
 ## Install Jenkins With war File
@@ -9,3 +9,8 @@
 - get the initial password and log in jenkins server via browser. on this case
 `http://192.168.56.11:8080`
 - configure user and install suggested plugins
+
+## Install and Configure Maven Plugin
+- Dashboard ==> Manage Jenkins ==> Global Tool Configuration ==> Maven installations ==> name: Maven3 
+==> save
+- Dashboard￼==> Manage Jenkins￼==> Plugin Manager ==> available ==> Maven Integration plugin ==> install
