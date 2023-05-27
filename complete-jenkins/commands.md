@@ -14,3 +14,10 @@
 - Dashboard ==> Manage Jenkins ==> Global Tool Configuration ==> Maven installations ==> name: Maven3 
 ==> save
 - Dashboard￼==> Manage Jenkins￼==> Plugin Manager ==> available ==> Maven Integration plugin ==> install
+
+## Integration jenkins with Github
+
+1. Integration Pre-Requisite
+- GitHub must be able to send data to Jenkins
+- Jenkins must have a public IP 
+- Except for on-premise GitHub instances 
