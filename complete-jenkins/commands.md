@@ -21,3 +21,11 @@
 - GitHub must be able to send data to Jenkins
 - Jenkins must have a public IP 
 - Except for on-premise GitHub instances 
+
+2. Github part add personal access token to jenkins instance
+- goto github account ==> profile dropdown ==> select settings ==> navigate developer settings ==> personal access tokens ==> generate new token ==> name: jenkins ==> 
+select scopes ==> check public repo ==> generate ==> grab the token value
+- goto jenkins ==> manage jenkins ==> configure system ==> github section (comes from github plugin) ==> github server name: github ==> api url comes auto ==> credential 
+==> add ==> jenkins credential providers page opens
+- On add credential section kind: secret text ==> leave the scope as it is ==> secret: paste the personal access token value ==> ID: github-PAT ==> add
+- On github section credentials dropdown shows new one (github-PAT) ==> select it and test the connection ==> uncheck Manage hooks (we configure it manually) ==> save
