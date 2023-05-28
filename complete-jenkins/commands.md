@@ -29,3 +29,8 @@ select scopes ==> check public repo ==> generate ==> grab the token value
 ==> add ==> jenkins credential providers page opens
 - On add credential section kind: secret text ==> leave the scope as it is ==> secret: paste the personal access token value ==> ID: github-PAT ==> add
 - On github section credentials dropdown shows new one (github-PAT) ==> select it and test the connection ==> uncheck Manage hooks (we configure it manually) ==> save
+
+3. Create ssh-key pair ==> add public key to github ==> add private key to jenkins to allow clone down the repo to local jenkins workspace
+- Create ssh-key pair: On jenkins open git bash session ==> enter `ssh-keygen` accept default ==> cat the public key ` cat ~/.ssh/id_rsa.pub` and grab it    
+- add public key to github ==> goto github account ==> profile dropdown ==> select settings ==> SSH and GPG keys ==> new SSH Key ==> give a name for title ex: Jenkins Public Key ==> paste the public to Key section ==> hit Add SSH key 
+- add private key to jenkins: cat the private key from git bash ` cat ~/.ssh/id_rsa ` and grab it ==> goto jenkins ==> manage jenkins ==> Security ==> Manage Credentials ==> select jenkins ==> select global ==> Add credential ==> kind: SSh Username with private key ==> leave the scope as it is ==> ID: github-private-key ==> Private key enter directly ==> paste the private key ==> ok
