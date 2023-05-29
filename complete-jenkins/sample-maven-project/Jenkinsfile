@@ -3,10 +3,12 @@ pipeline {
     stages {
     stage('maven -e install') {
       steps {
-        withMaven(maven: 'Maven3') {
-          sh 'mvn clean install'
+        dir('/home/vagrant/.jenkins/workspace/test-maven-pipeline/complete-jenkins/sample-maven-project/') {
+          withMaven(maven: 'Maven3') {
+            sh 'mvn clean install'
+          }
         }
-      }
+      }  
     }
   }
 }
