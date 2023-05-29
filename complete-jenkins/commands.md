@@ -34,3 +34,11 @@ select scopes ==> check public repo ==> generate ==> grab the token value
 - Create ssh-key pair: On jenkins open git bash session ==> enter `ssh-keygen` accept default ==> cat the public key ` cat ~/.ssh/id_rsa.pub` and grab it    
 - add public key to github ==> goto github account ==> profile dropdown ==> select settings ==> SSH and GPG keys ==> new SSH Key ==> give a name for title ex: Jenkins Public Key ==> paste the public to Key section ==> hit Add SSH key 
 - add private key to jenkins: cat the private key from git bash ` cat ~/.ssh/id_rsa ` and grab it ==> goto jenkins ==> manage jenkins ==> Security ==> Manage Credentials ==> select jenkins ==> select global ==> Add credential ==> kind: SSh Username with private key ==> leave the scope as it is ==> ID: github-private-key ==> Private key enter directly ==> paste the private key ==> ok
+
+4. Create new job
+- New item ==> test-job ==> free style project ==> ok ==> Source code management section select git ==> enter github repo SSH url ==> under credential section select user 
+==> specify the branch ==> Under Build Trigers section check Github hook tri.... ==> Under Post Build Action Add Post build action hit Set HitHub commit status ==> under 
+WHAT section status result hit One of default..... ==> Save
+- goto repo ==> settings ==> navigate Webhooks ==> Add webhook ==> Payload URL: add jenkins base url ==> add github-webhook to url ==> ex: http.......:8080/github-webhook 
+==> content type: application/json ==> choose the event that trigger this webhook ex:just push event ==> add webhook ==> be sure the test success ==> 
+- test the job both commit on github and gitbash ==> check console output
