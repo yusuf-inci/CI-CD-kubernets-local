@@ -42,3 +42,10 @@ WHAT section status result hit One of default..... ==> Save
 - goto repo ==> settings ==> navigate Webhooks ==> Add webhook ==> Payload URL: add jenkins base url ==> add github-webhook to url ==> ex: http.......:8080/github-webhook 
 ==> content type: application/json ==> choose the event that trigger this webhook ex:just push event ==> add webhook ==> be sure the test success ==> 
 - test the job both commit on github and gitbash ==> check console output
+
+## Create Jenkins Job for Maven project
+
+1. Maven Project Job Type Refresher
+- Maven Integration plugin provides a Maven Project job type ,
+- Significantly reduces manual configuration.
+- Test reporting in the jenkins interface
