@@ -49,3 +49,16 @@ WHAT section status result hit One of default..... ==> Save
 - Maven Integration plugin provides a Maven Project job type ,
 - Significantly reduces manual configuration.
 - Test reporting in the jenkins interface
+
+2. Create Maven project
+- Source code: https://github.com/tech-with-moss/sample-maven-project.git
+- Maven Quickstart url: https://maven.apache.org/archetypes/maven-archetype-quickstart/index.html
+- goto jenkins Dashboard new item -- name: test-maven-project -- Maven Project -- OK
+- configure source code management with SSH url
+- configure Build Trigers -- consider Build whenever ... in this case check it -- consider Build after .. in this case uncheck -- consider Build periodically for every 
+minute * * * * * in this case uncheck -- consider GitHub hook .... in this case check it -- consider Poll SCM (like opposite of hook) not a good practise, consuming 
+resources in this case uncheck 
+configure Build -- root pom -- goals and option : clean install -- Save
+
+3. Add webhook to github repo
+4. Build the project first time
