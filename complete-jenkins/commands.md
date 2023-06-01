@@ -62,3 +62,13 @@ configure Build -- root pom -- goals and option : clean install -- Save
 
 3. Add webhook to github repo
 4. Build the project first time
+
+## Configuring Jenkins Controller And Local Agent Node
+1. The Problem 
+- As software teams and their organizations grow, the need to scale Jenkins increases
+- Software teams may need to test on multiple platforms
+- A single Jenkins instance is insufficient
+- Need to scale the Jenkins solution up and/or out
+
+2. Adding Jenkins Controller and agent node for Windows
+3. Adding Jenkins Controller and Jenkins agent node in Azure
