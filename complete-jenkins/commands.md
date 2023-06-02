@@ -72,3 +72,15 @@ configure Build -- root pom -- goals and option : clean install -- Save
 
 2. Adding Jenkins Controller and agent node for Windows
 3. Adding Jenkins Controller and Jenkins agent node in Azure
+
+## Understanding Jenkins Pipeline
+
+1. Jenkins Pipeline Overview 
+- Complex build and release processes can be difficult to manage using only freestyle jobs
+- Jenkins Pipeline is a set of Jenkins plugins that allow you to model complex build and release processes as Groovy code in a file called “Jenkinsfile”
+
+2. Pipeline Benefits
+- Traceability and control of pipeline changes 
+- Exist independent of a Jenkins instance
+- Extensible through shared libraries and plugins
+- Supports logic such as conditionals, loops, and parallel execution
