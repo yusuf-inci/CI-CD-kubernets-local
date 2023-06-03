@@ -84,3 +84,18 @@ configure Build -- root pom -- goals and option : clean install -- Save
 - Exist independent of a Jenkins instance
 - Extensible through shared libraries and plugins
 - Supports logic such as conditionals, loops, and parallel execution
+
+3. Pipeline Terminology
+- Pipeline: User-defined model of a build, test and release process for a software product
+- Node: A machine that the Jenkins Controller can execute pipeline jobs on
+- Stage: A logical grouping of steps that typically align with the build, test and release portions of the software development lifecycle
+- Steps: Individual tasks completed within a stage of a pipeline (such as invoking a node's shell and executing a command such as “ls” or “mkdir" on it)
+
+4. Install Pipeline Maven Integration Plugin
+
+5. Create new job
+- name: test-pipeline-job -- Pipeline -- OK -- go down pipeline section -- definition: pipeline script -- hit pipeline syntax
+* in Script Generator, you can create individual step for a pipeline stage 
+* in Declarative Directive Generator, you can create overall structure and stages of pipeline
+- In script generation section select echo print message -- enter Hello World! -- hit generate pipeline script -- copy it and create new file on ide -- configure file with 
+jenkins file structure -- goto job -- configure -- pipeline -- paste the script -- save and build pipeline
