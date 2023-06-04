@@ -91,7 +91,8 @@ configure Build -- root pom -- goals and option : clean install -- Save
 - Stage: A logical grouping of steps that typically align with the build, test and release portions of the software development lifecycle
 - Steps: Individual tasks completed within a stage of a pipeline (such as invoking a node's shell and executing a command such as “ls” or “mkdir" on it)
 
-4. Install Pipeline Maven Integration Plugin
+4. Install Pipeline 
+
 
 5. Create new job
 - name: test-pipeline-job -- Pipeline -- OK -- go down pipeline section -- definition: pipeline script -- hit pipeline syntax
@@ -99,3 +100,13 @@ configure Build -- root pom -- goals and option : clean install -- Save
 * in Declarative Directive Generator, you can create overall structure and stages of pipeline
 - In script generation section select echo print message -- enter Hello World! -- hit generate pipeline script -- copy it and create new file on ide -- configure file with 
 jenkins file structure -- goto job -- configure -- pipeline -- paste the script -- save and build pipeline
+
+6. Create new a maven project pipeline
+- project repo: https://github.com/tech-with-moss/sample-maven-project.git
+- jenkinsfile already added this repo
+- on dashboard -- new item -- name: test-maven-pipeline -- pipeline -- ok -- go through the pipeline section -- select pipelin script from SCM -- specify repo and configure 
+all section -- hit pipeline syntax -- Declarative ... -- select Stages -- Stage name: maven install -- hit generate Declarative Directive -- copy the script and paste it to 
+jenkins file and configure it 
+- Back to jenkins and hit the script generator -- under steps select with maven: provide maven environment -- you can configure according to your needs -- for this case 
+under maven select maven3, use default setting for others -- generate script copy and configure jenkinsfile -- under withMaven code write `sh 'mvn clean install'` -- back 
+to jenkins and save -- build now
