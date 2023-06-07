@@ -1,11 +1,11 @@
-### Vagrant ###
+### Vagrant
 # General
 .vagrant/
 
 ### Log files (if you are creating logs in debug mode, uncomment this)
 *.log
 
-### Vagrant Patch ###
+### Vagrant Patch 
 *.box
 
 # Ignore all .txt files except requirement.txt
